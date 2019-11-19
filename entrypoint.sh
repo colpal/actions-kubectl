@@ -10,7 +10,7 @@ if [ -z "${GCP_PROJECT-}" ]; then
     echo "GCP_PROJECT not found. Exiting."
     exit 1
 fi
-if [-z "${GKE_CLUSTER_NAME-}"]; then
+if [ -z "${GKE_CLUSTER_NAME-}" ]; then
     echo "GKE_CLUSTER_NAME not found. Exiting."
     exit 1
 fi
