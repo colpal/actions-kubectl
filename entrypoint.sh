@@ -24,6 +24,5 @@ gcloud config set project "$GCP_PROJECT"
 CZONE=$(gcloud container clusters list --format="get(location)" --filter="name=$GKE_CLUSTER_NAME")
 
 gcloud container clusters get-credentials $GKE_CLUSTER_NAME --zone $CZONE --project $GCP_PROJECT
-gcloud components install kubectl
 
 sh -c "kubectl $*"
