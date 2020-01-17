@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v1
-      - uses: colpal/actions-kubectl@v1.0.0
+      - uses: colpal/actions-kubectl@v1.0.3
         env:
           GCP_CREDENTIALS: ${{ secrets.GCP_CREDENTIALS }}
           GCP_PROJECT: gcp-project-id
