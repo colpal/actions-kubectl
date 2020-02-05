@@ -1,6 +1,6 @@
 This action can be used to run a kubectl command.
 
-example usage:
+Example usage:
 
 ```yaml
 name: Run gcloud version on push
@@ -17,4 +17,11 @@ jobs:
           GKE_CLUSTER_NAME: cluster-name
         with:
           args: version
+```
+
+Note: GCP_CREDENTIALS needs to be a base64 encoded string.
+
+Example to 
+```bash
+cat my_service_account_secret_file.json | base64 > my_service_account_secret_file.json.base64
 ```
