@@ -17,10 +17,6 @@ fi
 
 echo "$GCP_CREDENTIALS" | base64 -d > /tmp/service_account.json
 
-curl -LO https://storage.googleapis.com/kubernetes-release/release/`curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt`/bin/linux/amd64/kubectl
-chmod +x ./kubectl
-mv ./kubectl /usr/local/bin/kubectl
-
 gcloud auth activate-service-account --key-file=/tmp/service_account.json
 
 gcloud config set project "$GCP_PROJECT"
