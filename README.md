@@ -18,3 +18,12 @@ jobs:
         with:
           args: version
 ```
+
+Note: GCP_CREDENTIALS needs to be a base64 encoded string.
+
+Example to convert your secret file into base64
+```bash
+cat my_service_account_secret_file.json | base64 > my_service_account_secret_file.json.base64
+```
+
+You can then proceed to open it with any text editor to copy and paste it in the GitHub Secrets.
